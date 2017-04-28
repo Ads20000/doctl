@@ -1,0 +1,26 @@
+name: doctl 
+version: '1.6.0'
+summary: 'Digital Ocean command line tool'
+description: |
+  DigitalOcean's web based control panel provides a 
+  convenient, point-and-click interface for managing 
+  Droplets. There are, however, times when a command-line
+  tool may be a preferable alternative; If you have many 
+  Droplets to manage, need to administer Droplets from the 
+  terminal without a graphical desktop available, or have 
+  tasks which would benefit from a scriptable interface.
+
+grade: stable
+confinement: strict
+
+apps:
+  doctl:
+    command: doctl
+    plugs:
+      - home
+      - network
+
+parts:
+  doctl:
+    plugin: dump
+    source: https://github.com/digitalocean/doctl/releases/download/v1.6.0/doctl-1.6.0-linux-amd64.tar.gz
