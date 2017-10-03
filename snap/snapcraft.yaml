@@ -23,4 +23,4 @@ apps:
 parts:
   doctl:
     plugin: dump
-    source: https://github.com/digitalocean/doctl/releases/download/v1.7.0/doctl-1.7.0-linux-amd64.tar.gz
+    source: https://github.com/digitalocean/doctl/releases/download/v$SNAPCRAFT_PROJECT_VERSION/doctl-$SNAPCRAFT_PROJECT_VERSION-linux-amd64.tar.gz
